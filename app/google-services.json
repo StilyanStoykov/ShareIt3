@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "456185970768",
+    "firebase_url": "https://shareit-8cfa5.firebaseio.com",
+    "project_id": "shareit-8cfa5",
+    "storage_bucket": "shareit-8cfa5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456185970768:android:d26dd55b2fef2e6a441155",
+        "android_client_info": {
+          "package_name": "com.stelkobg.shareit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456185970768-4r582388qegldcgqqcale0qupuus6pc4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0SBOrBmhamKKRvGpMNUVTPKr9rQqovgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456185970768-4r582388qegldcgqqcale0qupuus6pc4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
