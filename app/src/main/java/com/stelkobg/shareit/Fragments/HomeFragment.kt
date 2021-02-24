@@ -79,6 +79,7 @@ class HomeFragment : Fragment() {
         })
     }
 
+    //view posts of followed people
     private fun retrievePosts() {
         val postsRef = FirebaseDatabase.getInstance().reference.child("Posts")
 
