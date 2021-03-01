@@ -23,7 +23,7 @@ class CommentsAdapter(private val mContext: Context,
                       private val mComment: MutableList<Comment>?
 ) : RecyclerView.Adapter<CommentsAdapter.ViewHolder>()
 {
-
+    //връзка към Firebase сървър
     private var firebaseUser: FirebaseUser? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,11 +31,13 @@ class CommentsAdapter(private val mContext: Context,
         return ViewHolder(view)
     }
 
+    //взимане на общ брой публикации от последователи
     override fun getItemCount(): Int {
         return mComment!!.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        //взимане на информация относно портебиреля от Firebase сървър
         firebaseUser = FirebaseAuth.getInstance().currentUser
 
         val comment = mComment!![position]
@@ -46,22 +48,28 @@ class CommentsAdapter(private val mContext: Context,
 
 
     inner class ViewHolder(@NonNull itemView: View) : RecyclerView.ViewHolder(itemView){
+        //профилна снимка
         var imageProfile: CircleImageView
+        //потребителско име
         var userNameTV: TextView
+        //коментар
         var commentTV: TextView
 
         init{
+            //наследяване на снимка, потребителско име и коментари от дизайн страниците
             imageProfile = itemView.findViewById(R.id.user_profile_image_comment)
             userNameTV = itemView.findViewById(R.id.user_name_comment)
             commentTV = itemView.findViewById(R.id.comment_comment)
         }
     }
 
+    //връзване към Firebase сървър и изтегляне на информацията от него (раздел Users)
     private fun getUserInfo(imageProfile: CircleImageView, userNameTV: TextView, publisher: String) {
         val userREF = FirebaseDatabase.getInstance().reference
             .child("Users")
             .child(publisher)
 
+        //взимане на профилна снимка и потребителско име
         userREF.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists()){
