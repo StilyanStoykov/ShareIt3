@@ -85,12 +85,14 @@
                     android:id="@+id/profile_fragment_username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="username"
+
                     android:textSize="18sp"
                     android:maxLines="1"
                     android:textStyle="bold"
                     android:textColor="@color/colorBlack"
-                    android:layout_centerVertical="true"/>
+                    android:layout_centerVertical="true"
+                    />
+                <!--android:text="username"-->
 
                 <LinearLayout
                     android:id="@+id/followers_following_posts_bio"
