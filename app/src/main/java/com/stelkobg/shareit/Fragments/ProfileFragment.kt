@@ -70,7 +70,7 @@ class ProfileFragment : Fragment() {
         {
             checkFollowAndFollowingButtonStatus()
         }
-
+        
         val recyclerViewUploadImages: RecyclerView
         recyclerViewUploadImages = view.findViewById(R.id.recycler_view_upload_pic)
         recyclerViewUploadImages.setHasFixedSize(true)
